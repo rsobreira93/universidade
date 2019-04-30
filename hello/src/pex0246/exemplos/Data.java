@@ -23,7 +23,7 @@ public class Data {
 			return false;
 		}
 	}
-	private String mostraData() {
+	public String mostraData() {
 		String d = String.valueOf(this.dia);
 		String m = String.valueOf(this.mes);
 		String a = String.valueOf(this.ano);
