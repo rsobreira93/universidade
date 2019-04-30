@@ -27,7 +27,7 @@ public class RegistroAcademico {
 	private void mostrRegitro() {
 		System.out.println("Nome: " + this.nomeDoAluno);
 		System.out.println("Matricula: " + this.numeroDaMatricula);
-		System.out.println("Data de nascimento: " + this.dataDeNascimento);
+		System.out.println("Data de nascimento: " + this.dataDeNascimento.mostraData());
 		if(this.eBolsista) {
 			System.out.println("O aluno é bolsista");
 		}else {
@@ -38,12 +38,13 @@ public class RegistroAcademico {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Data dc = new Data();
-		RegistroAcademico ra = new RegistroAcademico();
 		dc.inicializaData(3, 4, 1993);
-		ra.inicializaRegistro("Romulo Ismael Pereira Sobreira", 2017021342, dc, false, 2017);
+		RegistroAcademico ra = new RegistroAcademico();
+		ra.inicializaRegistro("Romulo Ismael Pereira Sobreira", 2017021342, dc, true, 2017);
 		
-		ra.calculaMensalidade();
+		double mensalidade = ra.calculaMensalidade();
 		ra.mostrRegitro();
+		System.out.println("Mensalidade a pagar: R$ " + mensalidade);
 
 	}
 
