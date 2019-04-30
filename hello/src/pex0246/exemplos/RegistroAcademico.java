@@ -39,7 +39,7 @@ public class RegistroAcademico {
 		// TODO Auto-generated method stub
 		Data dc = new Data();
 		RegistroAcademico ra = new RegistroAcademico();
-		//dc.inicializaData(3, 4, 1993);
+		dc.inicializaData(3, 4, 1993);
 		ra.inicializaRegistro("Romulo Ismael Pereira Sobreira", 2017021342, dc, false, 2017);
 		
 		ra.calculaMensalidade();
