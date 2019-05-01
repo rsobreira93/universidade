@@ -9,7 +9,7 @@ public class Livro {
 	private int anoDeLancamento;
 	private boolean estado;
 	
-	private void criaLivro(String nome, String autor, String genero, int pag, boolean estado, int anoDeLancamento) {
+	public void criaLivro(String nome, String autor, String genero, int pag, boolean estado, int anoDeLancamento) {
 		this.autor = autor;
 		this.nome = nome;
 		this.genero = genero;
@@ -18,15 +18,15 @@ public class Livro {
 		this.anoDeLancamento= anoDeLancamento;
 	}
 	
-	private void abreLivro() {
+	public void abreLivro() {
 		if(!this.estado)
 			this.estado = true;
 	}
-	private void fechaLivro() {
+	public void fechaLivro() {
 		if(this.estado)
 			this.estado = false;
 	}
-	private void mostraEstado() {
+	public void mostraEstado() {
 		System.out.println("Caracteristas do livro!");
 		System.out.println("Nome do livro: " + this.nome);
 		System.out.println("Autor: " + this.autor);
