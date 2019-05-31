@@ -12,7 +12,7 @@ public class DemoPartida {
 		j1.somaGol();
 		j1.somaGol();
 		j1.somaGol();
-		System.out.println("Get gols  " + j1.getGols());
+		//System.out.println("Get gols  " + j1.getGols());
 		Jogador j2 = new Jogador("Ana Paula", 20, 60);
 		Jogador j3 = new Jogador("Euder Sena", 22, 70);
 		Jogador j4 = new Jogador("Jose Souza", 25, 30);
@@ -47,19 +47,26 @@ public class DemoPartida {
 		t2.insertJogador(j12);
 		t2.insertJogador(j14);
 		
-		System.out.println();
-		t1.imprimeJogadores();
-		t2.imprimeJogadores();
-		System.out.println();
-		
 		Date dt = new Date();
 		Partida p1 = new Partida(dt, t1, t2);
 		
+		System.out.println();
+		t1.imprimeJogadores();
+		System.out.println();
+		t2.imprimeJogadores();
+		System.out.println();
+		
 		p1.golFora();
 		p1.golFora();
 		p1.golFora();
 		p1.golCasa();
 		p1.golCasa();
+		
+		t1.somaDerota();
+		t2.somaVitoria();
+		
+		System.out.println(t2.getNome());
+		System.out.println(t2.getResultado());
 		
 		System.out.println();
 		System.out.println(p1.getPlacar()); 

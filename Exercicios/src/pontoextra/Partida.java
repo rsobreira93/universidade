@@ -24,10 +24,12 @@ public class Partida {
 	}
 	public void golCasa() {
 		this.golCas ++;
+		System.out.println("GOOOOOOOOL é do(a) "+this.timeCasa.getNome());
 		this.placarCasa = golCas;
 	}
 	public void golFora() {
 		this.golFor ++;
+		System.out.println("GOOOOOOOOL é do(a) "+this.timeFora.getNome());
 		this.placarVisitante = golFor;
 	}
 	public String getPlacar() {
