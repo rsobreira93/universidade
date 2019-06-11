@@ -1,12 +1,10 @@
 package pontoextra;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.time.LocalDate;
 
 public class Partida {
 
-	private Date data;
+	
 	private Time timeCasa;
 	private Time timeFora;
 	private int placarCasa;
@@ -14,11 +12,10 @@ public class Partida {
 	private int golCas;
 	private int golFor;
 	
-	Locale brasil = new Locale("pt", "BR"); 
-	DateFormat f2 = DateFormat.getDateInstance(DateFormat.FULL, brasil);
+	LocalDate data1 = LocalDate.now();
 	
-	public Partida(Date pData, Time pCas, Time pfora) {
-		this.data = pData;
+	public Partida(LocalDate pData, Time pCas, Time pfora) {
+		this.data1 = pData;
 		this.timeCasa = pCas;
 		this.timeFora = pfora;
 	}
@@ -36,10 +33,10 @@ public class Partida {
 		String placar = this.timeCasa.getNome() + " " + this.placarCasa +" X " + this.placarVisitante +" "+ this.timeFora.getNome();
 		return placar;
 	}
-	public Date getData() {
-		return data;
+	public LocalDate getData1() {
+		return data1;
 	}
-	public void setData(Date data) {
-		this.data = data;
+	public void setData1(int dia, int mes, int ano) {
+		this.data1 = LocalDate.of(ano, mes, dia);
 	}
 }
