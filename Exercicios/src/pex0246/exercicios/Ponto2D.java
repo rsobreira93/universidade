@@ -25,9 +25,10 @@ public class Ponto2D {
 		temporario.inicializaPonto2D(x, y);
 		return temporario;
 	}
+	@Override
 	public String toString() {
-		String  resultado = "(" + x + "," + y +")";
-		return resultado;
+		return "Ponto2D [x=" + x + ", y=" + y + "]";
 	}
+	
 
 }

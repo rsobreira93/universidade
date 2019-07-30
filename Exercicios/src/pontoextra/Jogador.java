@@ -39,13 +39,13 @@ public class Jogador {
 			this.habilidade = ((this.habilidade * 5) + (((int)(this.altura * 100)) * 2) + (this.reflexos * 3))/10;
 			return this.habilidade;
 		}else if(this.tipo == "Defensor") {
-			this.camisa =(int)1+ gerador.nextInt(6);
+			this.camisa =(int)2+ gerador.nextInt(6);
 			this.cobertura = gerador.nextInt(100);
 			this.desarme = gerador.nextInt(100);
 			this.habilidade = ((this.habilidade * 5) + (this.cobertura * 3) + (this.desarme * 2))/10;
 			return this.habilidade;
 		}else {
-			this.camisa = (int)6+ gerador.nextInt(10);
+			this.camisa = (int)7+ gerador.nextInt(10);
 			this.velocidade = (int) gerador.nextInt(100);
 			this.tecnica = (int)gerador.nextInt(100);
 			this.habilidade = ((this.habilidade * 5) + (this.velocidade * 2) + (this.tecnica * 3))/10;
@@ -80,7 +80,7 @@ public class Jogador {
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Posição: " + this.tipo);
 		if(this.tipo == "Goleiro") {
-			System.out.println("Altura: " + this.altura);
+			System.out.printf("Altura: %.2f %n", this.altura);
 			System.out.println("Reflexos: " + this.reflexos);
 		}else if(this.tipo == "Defensor") {
 			System.out.println("Cobertura: " + this.cobertura);

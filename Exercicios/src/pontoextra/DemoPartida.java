@@ -13,11 +13,23 @@ public class DemoPartida {
 		j1.somaGol();
 		j1.somaGol();
 		Jogador j2 = new Jogador("Ana Paula", 20, 60);
+		j2.setTipo("Goleiro");
+		j2.getHabilidade();
 		Jogador j3 = new Jogador("Euder Sena", 22, 70);
+		j3.setTipo("Defensor");
+		j3.getHabilidade();
 		Jogador j4 = new Jogador("Jose Souza", 25, 30);
+		j4.setTipo("Defensor");
+		j4.getHabilidade();
 		Jogador j5 = new Jogador("João da Silva", 19, 90);
+		j5.setTipo("Meia");
+		j5.getHabilidade();
 		Jogador j6 = new Jogador("Vaca morta", 27, 35);
+		j6.setTipo("Meia");
+		j6.getHabilidade();
 		Jogador j7 = new Jogador("Cronaldo do Nordeste", 33, 98);
+		j7.setTipo("Meia");
+		j7.getHabilidade();
 		
 		Jogador j8 = new Jogador("Ramon Sousa", 26, 50);
 		Jogador j9 = new Jogador("Geovane dos Santos", 20, 60);
@@ -72,6 +84,12 @@ public class DemoPartida {
 		System.out.println(p1.getPlacar()); 
 		
 		j1.mostrDadosJogador();
+		j2.mostrDadosJogador();
+		j3.mostrDadosJogador();
+		j4.mostrDadosJogador();
+		j5.mostrDadosJogador();
+		j6.mostrDadosJogador();
+		j7.mostrDadosJogador();
 	}
 
 }
